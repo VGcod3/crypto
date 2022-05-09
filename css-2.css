@@ -1,0 +1,542 @@
+
+
+/* Цвета и текст иконок. Если текст не нужен, вместо него оставьте пробел или сотрите текст с кавычками вообще */
+:root {
+
+--cms--icon: url("e6310c8f34e5d25590ae42b996126205.svg");
+--cms--icon--active: url("9a402282a6618e13e4c471bc12aa38cc.svg");
+--cms--text: 'CMS';
+
+--teach--icon: url("9856cbd2d6bbff0308b0773bdb6ac083.svg");
+--teach--icon--active: url("a5bfd19b748c3bbefc92c4cc8e5d883c.svg");
+--teach--text: 'Тренинги';
+--user--icon: url("59d95df4561d6ca42d5fd6502c28acd9.svg");
+--user--icon--active: url("5188c06f02478bd0ee6c7f48a732dea2.svg");
+--user--text: 'Юзеры';
+--tasks--icon: url("b60d7eb35b8993b5083d863b68a156a4.svg");
+--tasks--icon--active: url("7877910ce3ea271f4dc5e56bd738ba09.svg");
+--tasks--text: 'Процессы';
+--notifications--icon: url("9f3af557d15eb9007eb35075597a56ca.svg");
+--notifications--icon--active: url("fc7f510f19844cfac474ab4d44b88773.svg");
+--notifications--text: 'Письма';
+--sales--icon: url("b2b9d7807d7856dc9a03ac360eeff33f.svg");
+--sales--icon--active: url("17bd16b7b0873b526532d398cab316f0.svg");
+--sales--text: 'Покупки';
+--chatium--icon: url("34ec13653c42717ccf0179459bbea7b4.svg");
+--chatium--icon--active: url("f080eb298c9469a9244188e12f5cf2da.svg");
+--chatium--text: 'Приложение';
+--icons--width: 24px;
+--icons--height: 40%;
+--sidebar-width: 117px;
+    --subsidebar-width: 280px;
+}
+/* body {
+opacity: 0; 
+  background: white;
+  transition: all 0.3s linear;
+}
+html {
+  background: white;
+  z-index:1;
+}
+html::before {
+  z-index:1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+content: url(https://fs.getcourse.ru/fileservice/file/download/a/195479/sc/509/h/3f370df839815215951a0b02615ebf81.svg);
+}
+*/
+
+.gc-main-content.with-left-menu .container {
+    margin-left: auto !important;
+     margin-right: auto !important;
+}
+
+html, body {
+  position: relative;
+  min-width: 99vw;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+
+html::before {
+      animation: blink--logo 2s linear infinite normal;
+  }
+.unhold {
+  opacity: 1;
+}
+  @keyframes blink--logo {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.gc-account-user-submenu li {
+position: relative;
+}
+.subitem-link {
+position: relative;
+  z-index:2;
+ background: none !important; 
+    font-family: Aeroport!important;
+    font-style: normal;
+font-weight: 500!important;
+font-size: 18px!important;
+line-height: 26px!important;
+color: #000000;
+}
+.subitem-link:hover {
+    background: none !important;
+}
+.gc-account-user-submenu-bar h3 {
+    margin-top: 124px;
+    padding-left: 40px;
+    font-family: Aeroport;
+    font-style: normal;
+    font-size: 27px;
+    line-height: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-bottom: 31px;
+}
+.gc-account-user-submenu-bar {
+background: white!important;
+}
+.gc-account-user-submenu li a {
+text-transform: initial !important;
+}
+.gc-account-user-submenu li::after {
+    background: #282828;
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  content: '';
+  transition: all 0.2s linear;
+}
+.gc-account-user-submenu li:hover::after {
+    background: #282828;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  content: '';
+}
+.gc-account-user-submenu .notify-count {
+background: #F6D137 !important;
+border-radius: 5px !important;
+font-family: Aeroport;
+font-style: normal;
+font-weight: 900 !important;
+font-size: 18px !important;
+line-height: 25px !important;
+color: #000000 !important;
+    padding: 0px !important;
+}
+.gc-account-user-submenu {
+padding-left: 23px !important;
+}
+.gc-account-user-menu {
+overflow-y: auto;
+max-height: 100vh;
+}
+.gc-account-user-submenu-bar .gc-account-user-submenu li a {
+transition: all 0.1s linear;
+    
+}
+.gc-account-user-submenu-bar .gc-account-user-submenu li a:hover {
+    color: white !important;
+}
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  scrollbar-dark-shadow-color: #646464;
+}
+.gc-fade-wrapper .gc-fade {
+    background: rgba(40, 40, 40, 0.14);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 1;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 0px;}
+::-webkit-scrollbar-corner { background-color: #646464;}}
+::-webkit-resizer { background-color: #666;}
+.gc-account-user-submenu-bar .gc-account-user-submenu li a {
+color: black !important;
+}
+
+@media (min-width: 768px) {
+    .gc-account-leftbar .gc-account-user-submenu-bar {
+left: var(--sidebar-width) !important;
+width: var(--subsidebar-width) !important;
+        
+}
+.gc-main-content.with-left-menu {
+margin-left: var(--sidebar-width)!important;
+}
+   .gc-account-user-menu li:nth-child(3) {
+margin-top: 28px;
+}
+   .gc-account-user-menu .menu-item-cms {
+margin-top: 20px !important;
+}
+    .widther {
+margin-left: calc(var(--sidebar-width) + var(--subsidebar-width)) !important;
+}
+.with-left-menu .gc-into-main-content {
+ left: var(--sidebar-width) !important;
+}
+
+.resp-screen {
+ left: var(--sidebar-width) !important;
+}
+.gc-account-leftbar {
+width: var(--sidebar-width) !important;
+}
+}
+/* Накидываем фону пунктов прозрачности, чтобы за ними было видно фон менюшки */
+.gc-account-user-menu .menu-item a {
+background: transparent !important;
+        position: relative;
+        display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+        height: 72px;
+}
+.gc-account-user-menu .menu-item {
+
+}
+.gc-account-user-menu .menu-item:hover {
+    background-color: #282828 !important;
+}
+.gc-account-user-menu .menu-item-notifications_button_small:hover, .gc-account-user-menu  .menu-item-profile:hover {
+background-color: black !important;
+}
+.gc-account-user-menu .menu-item.selected {
+ background-color: rgba(255,255,255,0.2) !important;
+}
+@media (max-width: 768px) {
+
+
+}
+
+/* Иконка профиля */
+.gc-account-user-menu .menu-item-profile img {
+border-radius: 50%;
+}
+@media (max-width: 768px) {
+.menu-item-profile img {
+width: 30px !important;
+    height: 30px !important;
+}
+   .gc-account-user-menu .menu-item-profile {
+margin-bottom: 10px !important;
+}
+    
+}
+.gc-account-leftbar .gc-account-user-menu {
+padding-top: 41px;
+}
+
+/* Фон самой менюшки */
+.gc-account-leftbar {
+background: #000000;
+}
+.gc-account-leftbar .gc-account-user-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .gc-account-leftbar .gc-account-user-menu {
+padding-top: 0px;
+}
+.gc-account-leftbar .gc-account-user-menu {
+background: #000000;
+    }
+    /* Горизонтальная полоска с мобилок */
+    .gc-account-leftbar.expanded .toggle-link, .gc-account-leftbar .toggle-link, .toggler-item  {
+background: #000000 !important;
+        color: transparent!important;
+}
+}
+.gc-account-leftbar .gc-account-user-menu li {
+    border-bottom: 0px solid black !important;
+}
+/* Счетчик уведомлений */
+.gc-account-user-menu .menu-item-notifications_button_small .notify-count {
+    transform: translate(0px, -1px);
+background: transparent !important;
+color: #000 !important;
+    padding: 0px !important;
+font-family: Aeroport;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 25px;
+display: flex;
+align-items: center;
+    justify-content: center;
+color: #000000;
+pointer-events: none;
+    position: static;
+    width: max-content;
+    
+}
+.menu-item-teach .notify-count, .menu-item-notifications .notify-count {
+    padding-left: 20px;
+    padding-right: 5px;
+    background: url("") !important;
+    color: black;
+    width: min-content;
+
+}
+.gc-account-user-menu .menu-item::before {
+
+}
+@media (max-width: 768px) {
+
+}
+/* Дальше лучше не лезть без острой необходимости */
+.gc-account-leftbar .menu-item-notifications_button_small {
+margin-top: 25px !important;
+}
+.gc-account-leftbar .gc-account-user-menu li.menu-item-notifications_button_small a {
+    height: 24px;
+    display: flex !important;
+    background: #F6D137 !important;
+    border-radius: 5px;
+    width: min-content;
+}
+.gc-account-user-menu .menu-item-notifications_button_small img {
+    width: 11px;
+    margin-right: 5px;
+    }
+
+
+.gc-account-user-menu .menu-item-cms img {
+opacity: 0;
+    }
+.gc-account-user-menu .menu-item-cms {
+background-image: var(--cms--icon);
+background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-cms.active,.menu-item-cms.selected {
+background-image: var(--cms--icon--active);
+
+}
+
+.gc-account-user-menu .menu-item-teach img {
+opacity: 0;
+}
+.gc-account-user-menu .menu-item-teach {
+background-image: var(--teach--icon);
+background-size: 31px 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-teach.active,.menu-item-teach.selected {
+background-image: var(--teach--icon--active);
+
+}
+.gc-account-user-menu .menu-item-instruction.active svg path, .gc-account-user-menu .menu-item-instruction.selected svg path {
+fill: #F6D137 !important;
+}
+
+
+.gc-account-user-menu .menu-item-user img {
+opacity: 0;
+}
+.gc-account-user-menu .menu-item-user {
+background-image: var(--user--icon);
+background-size: 43px 28px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-user.active,.menu-item-user.selected {
+background-image: var(--user--icon--active);
+
+}
+
+.gc-account-user-menu .menu-item-tasks img {
+opacity: 0;
+}
+.gc-account-user-menu .menu-item-tasks {
+background-image: var(--tasks--icon);
+background-size: 36px 34px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-tasks.active,.menu-item-tasks.selected {
+background-image: var(--tasks--icon--active);
+
+}
+
+.gc-account-user-menu .menu-item-notifications img {
+opacity: 0;
+}
+.gc-account-user-menu .menu-item-notifications {
+background-image: var(--notifications--icon);
+background-size: 34px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-notifications.active,.menu-item-notifications.selected {
+background-image: var(--notifications--icon--active);
+
+}
+
+.gc-account-user-menu .menu-item-sales img {
+opacity: 0;
+}
+.gc-account-user-menu .menu-item-sales {
+background-image: var(--sales--icon);
+background-size: 31px 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-sales.active,.menu-item-sales.selected {
+background-image: var(--sales--icon--active);
+
+}
+
+.gc-account-user-menu .menu-item-chatium img {
+opacity: 0;
+}
+.gc-account-user-menu .menu-item-chatium {
+background-image: var(--chatium--icon);
+background-size: 33px 36px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gc-account-user-menu .menu-item-chatium.active,.menu-item-chatium.selected {
+background-image: var(--chatium--icon--active);
+
+}
+
+@media (max-width: 1000px) {
+    .menu-item-teach .notify-count, .menu-item-notifications .notify-count {
+ background-size: auto 100%;
+
+}
+.gc-account-leftbar .gc-account-user-submenu-bar {
+    width: 270px;
+
+}
+    .gc-account-leftbar .toggle-link img {
+opacity: 0;
+}
+    .gc-account-leftbar .toggle-link {
+position: relative;
+}
+    .gc-account-leftbar .toggle-link::before {
+position: absolute;
+        left:8px;
+        top:5px;
+        background-image: url("");
+        width: 35px;
+        height: 35px;
+        background-color: black;
+        background-position: center center;
+        content: '';
+        background-repeat: no-repeat;
+}
+        .gc-account-leftbar.expanded .toggle-link::before {
+
+background-image: url("");
+        background-color: black;
+        background-position: center center;
+
+        background-repeat: no-repeat;
+}
+.menu-item-teach .notify-count, .menu-item-notifications .notify-count {
+    background-size: auto 100%!important;
+
+}
+    .gc-account-leftbar .gc-account-user-menu .notify-count {
+font-size: 12px!important;
+line-height: 16px!important;
+}
+    .gc-account-user-menu .menu-item-cms {
+background-size: 22px 22px;
+}
+
+.gc-account-user-menu .menu-item-teach {
+background-size: 22px 22px;
+}
+
+.gc-account-user-menu .menu-item-instruction svg {
+width: 31px!important;
+    height: 31px!important;
+}
+
+.gc-account-user-menu .menu-item-user {
+background-size: 33px 18px;
+}
+
+.gc-account-user-menu .menu-item-tasks {
+background-size: 26px 24px;
+}
+
+.gc-account-user-menu .menu-item-notifications {
+background-size: 24px 20px;
+}
+
+
+.gc-account-user-menu .menu-item-sales {
+background-size: 21px 30px;
+}
+
+.gc-account-user-menu .menu-item-chatium {
+background-size: 23px 26px;
+}
+    .gc-account-leftbar .gc-account-user-menu li a {
+    height: 50px;
+}
+    .menu-item:not(.menu-item-notifications_button_small) .notify-count {
+transform: translateY(7px);
+padding-left: 25px;
+}
+    .gc-account-user-submenu-bar h3 {
+       margin-top: 26px;
+    padding-left: 30px;
+            font-size: 20px;
+    line-height: 22px;
+    }
+    .gc-account-user-submenu {
+    padding-left: 12px !important;
+}
+    .subitem-link {
+     font-size: 14px!important;
+    line-height: 16px!important;
+}
+}
+.gc-account-leftbar .gc-account-user-submenu-bar div.user-balance {
+    margin-left: 43px;
+ 
+}
+.talks-widget-button {
+background: black;
+}
+.fullwidth {
+width: 100%;
+}
+.webinar-blocks-popover {
+    transform: translateX(50px);
+}
