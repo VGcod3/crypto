@@ -31,7 +31,8 @@
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	</style>
 	<link rel="stylesheet" href="form.css">
-
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body class="t-body" style="margin: 0px;">
@@ -191,29 +192,32 @@
 				In fondo la politica del team</h3>
 		</div>
 
-		<form action="POST" class="form col-md-6 col-8">
+		<form action="send.php" method="post" class="form col-md-6 col-8">
 			<label for="name_" class="form-label">Your first name</label>
-			<input type="text" id="name_" class="form-control">
+			<input required type="text" name="first_name" id="name_" class="form-control">
 
 			<label for="secondname_" class="form-label">Your second name</label>
-			<input type="text" id="secondname_" class="form-control">
+			<input required type="text" name="last_name" id="secondname_" class="form-control">
 
 			<label for="email_" class="form-label">E-mail</label>
-			<input type="email" id="email_" class="form-control">
+			<input required type="email" name="email" id="email_" class="form-control">
 
 			<div class="phone-wrapper intl-tel-input" style="display: flex;flex-direction:column;">
 				<label for="phoneinput_" class="form-label">Phone number</label>
-				<input id="phoneinput_" class="form-control form-control-lg intl-tel-input" name="phone" type="tel">
+				<input required id="phoneinput_" class="form-control form-control-lg intl-tel-input" name="phone" type="tel">
 			</div>
 
 			<label for="inputPassword5_" class="form-label">Password</label>
 			<div class="password-wrapper col-12 row">
-				<input required type="password" id="inputPassword5_" class="form-control col-8">
+				<input required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$" type="password" name="password"
+					id="inputPassword5_" class="form-control col-8">
 				<input type="button" id="inputButton_" value="Generate" class="form-control col-4">
 			</div>
 
 			<button class="btn btn-warning" type="submit">Submit form</button>
-
+			<input type="hidden" class="phonecc" name="phonecc" value="">
+			<input type="hidden" name="session_id" class="session_id">
+			<input type="hidden" name="affiliate_id" class="affiliate_id">
 		</form>
 	</div>
 
@@ -428,17 +432,17 @@
 
 		<form action="POST" class="form col-md-6 col-8">
 			<label for="name" class="form-label">Your first name</label>
-			<input type="text" id="name" class="form-control">
+			<input required type="text" name="first_name" id="name" class="form-control">
 
 			<label for="secondname" class="form-label">Your second name</label>
-			<input type="text" id="secondname" class="form-control">
+			<input required type="text" name="last_name" id="secondname" class="form-control">
 
 			<label for="email" class="form-label">E-mail</label>
-			<input type="email" id="email" class="form-control">
+			<input required type="email" name="email" id="email" class="form-control">
 
 			<div class="phone-wrapper intl-tel-input" style="display: flex;flex-direction:column;">
 				<label for="phoneinput" class="form-label">Phone number</label>
-				<input id="phoneinput" class="form-control form-control-lg intl-tel-input" name="phone" type="tel">
+				<input required id="phoneinput" class="form-control form-control-lg intl-tel-input" name="phone" type="tel">
 			</div>
 
 
@@ -446,12 +450,15 @@
 			<label for="inputPassword5" class="form-label">Password</label>
 
 			<div class="password-wrapper col-12 row">
-				<input required type="password" id="inputPassword5" class="form-control col-8">
+				<input required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$" type="password" name="password"
+					id="inputPassword5" class="form-control col-8">
 				<input type="button" id="inputButton" value="Generate" class="form-control col-4">
 			</div>
 
 			<button class="btn btn-warning" type="submit">Submit form</button>
-
+			<input type="hidden" class="phonecc" name="phonecc" value="">
+			<input type="hidden" name="session_id" class="session_id">
+			<input type="hidden" name="affiliate_id" class="affiliate_id">
 		</form>
 	</div>
 
@@ -774,6 +781,12 @@
 		});
 	</script>
 	<script src="form.js"></script>
+	<script type="text/javascript">
+		const first = document.querySelector('.iti__dial-code');
+		var cc = first.textContent;
+
+		$(".phonecc").val(cc);
+	</script>
 </body>
 
 </html>
